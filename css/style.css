@@ -1,0 +1,516 @@
+/* FUENTES*/
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap'); /* font-family: 'Lato', sans-serif;  */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500i&display=swap'); /* font-family: 'Roboto', sans-serif;  */
+
+html{
+    box-sizing: border-box;
+    min-height: 100%;
+    font-size: 62.5%;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/*icono de carga*/
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('../img/images/loader000.gif') 50% 50% no-repeat rgb(249,249,249);
+    opacity: .5;
+}
+/*GLOBALES*/
+.negritaFechas{
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+}
+h1{ 
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+h2{
+    text-align: center;
+    color: #f55e73;
+    font-size: 3.6rem;
+    text-transform: uppercase;
+}
+img{
+    max-width: 100%;
+}
+.ocultar{
+    display: none;
+}
+label{
+    font-size: 1.6rem;
+}
+span{
+    font-weight: 700;
+}
+
+/* HEADER */
+header.header{
+    background-image: url(../img/avion-portada.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 50rem;
+}
+.img-icono i{
+    font-size: 4rem;
+    color: black;
+}
+.img-icono img{
+    width: 55%;
+    background-color: #ffffff;
+    border-radius: 6rem;
+}
+.contenido-header{
+    padding: 10rem;
+}
+.contenido-header h1{
+    font-size: 6rem;
+    color:#f52a2a;
+    margin: 2rem;
+}
+.contenido-header img{
+    width: 10%;
+}
+
+/* Navegacion*/
+.navegacion{
+    background-color: #ff7c8d;
+    height: 7.5rem;
+    box-shadow: 4px 6px 5px 5px #ff6277d8;
+    border-top: 4px solid rgba(0, 0, 0, 0.541);
+}
+.navegacion-principal{
+    margin: 0 auto;
+    text-align: center;
+    padding: 1rem;
+}
+.navegacion-principal a{
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    text-decoration: none;
+    color:#ffffff;
+    border: 1px solid rgb(250, 47, 98);
+    padding: .7rem;
+    display: inline-block;
+    width:10rem;
+    transition: all .3s ease-in-out;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+}
+.navegacion-principal a:hover{
+    background-color: #f55e73;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+.navegacion-principal a:last-child{
+    width: 15rem;
+    border: 2px solid #ffffff;
+}
+
+/* VUELOS */
+.contenedor-principal{
+    width: 85%;
+    margin: 0 auto;
+}
+.vuelos{
+    margin-top: 6rem;
+    background-color: #e1e1e1;
+    width: 60%;
+    font-size: 1.3rem;
+}
+.seleccionadores{
+    width: 25%;
+    background-color: tomato;
+    height: 4rem;
+}
+.seleccionadores a{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    margin-left: 3rem;
+    display: inline-block;
+    padding: .5rem;
+    width: 35%;
+    transition: all .3s ease-in-out;
+}
+.activo{
+    border-bottom: 2px solid #ffffff;
+}
+.seleccionadores a:hover{
+    background-color: #ff7c8d;
+    border-radius: 1rem;
+    border-bottom: 2px solid #ffffff;
+}
+        /*FORMULARIO*/
+.form{
+    margin-bottom: 2.5rem;
+}
+
+.form input{
+    margin-left: 1.5rem;
+    font-size: 1.4rem;
+}
+.form label{
+    margin-left: 1rem;
+}
+.ida-vuelta{
+    width: 85%;
+    margin: 2rem auto;
+}
+.vuelta{
+    display: inline-block;
+}
+.form-control{
+    width: 15rem;
+    display: inline-block;
+}
+select.custom-select{
+    width: 15rem;
+    font-size: 1.5rem;
+}
+.btn-success{
+    display: block;
+    margin: 0 auto;
+    font-size: 1.7rem;
+    width: 50%;
+}
+.close{
+    margin-top: -4rem;
+}
+/*CIERRE*/
+.cierre{
+    margin-top:4rem;
+    text-align: center;
+    font-size: 3.3rem;
+}
+.cierre i:nth-child(2){
+    font-size: 4rem;
+    color: brown;
+}
+
+/*Imagen contenedores*/
+.img-conteiner{
+    background-image: url(../img/img1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    margin-top: 5rem;
+    height: 20rem;
+}
+.titular{
+    background-color: rgba(0, 0, 0, 0.664);
+    margin: 0 auto;
+}
+.titular h3{
+    padding: 3rem;
+    font-size: 3rem;
+    text-align: center;
+    color: #ffffff;
+}
+.mig2{
+    background-image: url(../img/img2.jpg);
+    background-size: cover;
+}
+
+/*HOTELERIA*/
+.main-conteiner{
+    margin-top: 3rem;
+}
+.hoteleria{
+    text-align: center;
+}
+.conteinerHoteles{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1rem;
+    background-color: #ff7c8d33;
+    margin-top: 4rem;
+}
+.conteinerHoteles h4{
+    padding: 1rem;
+    background-color: #f55e73;
+    color: #ffffff;
+}
+.img-hoteles img{
+    height: 30rem;
+    width:100%;
+}
+.conteinerHoteles ul{
+    padding: 1rem;
+    margin-top: 1rem;
+    list-style: none;
+    font-size: 1.5rem;
+    text-align: left;
+    background-color: #ff7c8d;
+    color: white;
+}
+.conteinerHoteles ul li{
+    margin-bottom: 1rem;
+}
+.conteinerHoteles ul li i{
+    margin-left: 1rem;
+    margin-right: .8rem;
+    font-size: 2rem;
+    color: brown;
+}
+.hotel{
+    background-color: #ffd7dd69;
+    transition: all .3s ease-in-out;
+    border: 2px solid rgb(255, 198, 198);
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+.hotel:hover{
+    border: 2px solid #f52a2a;
+}
+/*FOOTER*/
+footer{
+    margin-top: 5rem;
+}
+.footer-conteiner{
+    background-color: rgb(255, 221, 248);
+    height: 20rem;
+    text-align: center;
+} 
+.footer-conteiner img{
+    width: 15rem;
+}
+.footer-conteiner img:hover{
+    transform: scale(1.1);
+}
+
+/*BUSQUEDA DE VUELOS*/
+.busquedaPrincipal{
+    display: none;
+}
+.conteiner-busqueda{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    margin-top: 3rem;
+    background-color: rgba(254, 221, 255, 0.562);
+}
+        /*IDA*/
+.conteiner-ida{
+    width: 75%;
+    height: 20rem;
+    box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.473);
+    background-color: white;
+}
+.primerBloque, .segundoBloque{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+.primerBloque{
+    padding: 1rem 0 0 0;
+    background-color: rgba(243, 243, 243, 0.507);
+    border-top: 1px solid rgba(0, 0, 0, 0.288);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.288);
+}
+.fecha{
+    width: 12%;
+    text-align: center;
+}
+.fecha p{
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+.origen, .destino{
+    width: 40%;
+    text-align: center;
+}
+.segundoBloque{
+    padding: 1rem;
+    text-align: left;
+    background-color: rgba(229, 255, 190, 0.774);
+}
+.aerolinea{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 1rem;
+}
+.aerolinea p{
+    margin:0 1rem;
+    font-size: 1.3rem;
+    font-family: 'Roboto', sans-serif;
+}
+.aerolinea img{
+    width: 2rem;
+}
+.horaSalida, .horaLlegada{
+    width: 40%;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: 'Roboto', sans-serif;
+}
+.numVuelo{
+    display: none;
+}
+    /*VUELTA*/
+.fechaVuelta-style i{
+    transform: rotate(180deg);
+}
+        /*Precios*/
+.preciosBusqueda{
+    width: 20%;
+    text-align: left;
+    font-size: 1.4rem;
+}
+.preciosBusqueda .asientosDisponibles{
+    background-color: red;
+    width: 50%;
+    border-radius: 1rem;
+    color: white;
+    text-align: center;
+}
+.asientosDisponibles{
+    display: flex;
+    padding: 1rem;
+    text-align: center;
+}
+.preciosBusqueda .nombrePasajero, .preciosPasajero{
+    display: block;
+    text-align: center;
+}
+.preciosBusqueda p{
+    text-align: center;
+}
+.pasajerosCosto{
+    display: flex;
+}
+.texto-costo ul, .costoTotal ul{
+    padding: 0;
+    list-style: none;
+}
+.texto-costo{
+    width: 60%;
+}
+.costoTotal ul{
+    text-align: right;
+    margin-left: 6rem;
+}
+.costoTotal ul li{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+
+/*ADMIN*/
+.cabecera{
+    margin-bottom: 4rem;
+    background-color: rgb(255, 198, 198);
+    color: white;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+.cabecera:hover{
+    background-color: rgb(255, 100, 100);
+}
+a.botonIndex{
+    color: white;
+    display: block;
+    padding: 1rem;
+}
+.conteinerAd{
+    margin-top: 4rem;
+    background-color: #ffffff;
+    height: 40rem;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.10);
+}
+#cargaHorarios{
+    margin: 4rem auto;
+    text-align: center;
+}
+.horariosCargados, .ReserCargados{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.4rem;
+    height:auto;
+}
+.btn-danger{
+    width: 8rem;
+    font-size: 1.3rem;
+    margin-left: 3rem;
+}
+.reservaciones{
+    margin-top: 9rem;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.10);
+    height: 50rem;
+}
+.ReserCargados{
+    margin-top: 3rem;
+}
+/*PAG DE COMPRAS*/
+.compraUI{
+    display: none;
+}
+.compraBoletos{
+    background-color: #ffdcdc !important;
+    padding: 1.5rem;
+}
+.barra{
+    background-color: #f55e73;
+    width: 15%;
+    padding:1rem;
+    font-size: 2rem;
+    border-radius: 2rem;
+    text-align: center;
+}
+.campo{
+    margin-top:3rem;
+    text-align: center;
+}
+.campo label{
+    margin-right: .8rem;
+}
+.campo input{
+    margin-right: .8rem;
+    border: 1px solid #f55e73;
+    height: 3rem;
+    width: 19rem;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+    outline: none;
+}
+.campo input:focus{
+    text-align: center;
+}
+.comprarBoleto input{
+    width: 33rem;
+}
+.btn-compra{
+    margin: auto;
+    margin-top: 3rem;
+    width: 40%;
+}
+.errorCompra{
+    font-size: 1.6rem;
+}
+.ticketCargado{
+    font-size: 1.3rem;
+}
+.ticketCargado .title-vuelo{
+    font-size: 1.9rem;
+}

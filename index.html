@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Charly´s Viajes</title>
+</head>
+<body>
+    <!--CARGANDO-->
+    <div class="loader"></div>
+
+    <header class="header">
+
+        <div class="img-icono">
+            <a href="#origen"><i class="fab fa-avianex"></i></a>
+        </div>
+
+        <div class="contenido-header">
+            <h1>Charly´s Viajes<img src="img/menem 100resol.png" alt="logo menem"></h1> 
+        </div>
+    </header>
+
+    <!--NAVEGACION-->
+    <div class="navegacion">
+        <nav class="navegacion-principal">
+            <a href="#hoteles">Hoteleria</a>
+            <a href="#">Vuelos</a>
+            <a href="#promociones">Promociones</a>
+        </nav>    
+    </div>
+
+    <div class="contenedor-principal">
+        <div class="contenedor">
+            <div class="vuelos">
+                <form>
+                    <!--Seleccion de ida o vuelta-->
+                    <div class="seleccionadores">
+                        <a href="#">Ida</a>
+                    </div>
+
+                   <div class="ida-vuelta">
+                        <!--origen y destino-->
+                        <div class="destino-origen form">
+                            <label>Origen:</label>
+                            <select class="custom-select" name="OrigenDestino" id="selectOrigen">
+                                <option value="Mendoza">Mendoza</option>
+                                <option value="Buenos Aires">Buenos Aires</option>
+                            </select> 
+                            <label>Destino:</label>
+                            <select class="custom-select" name="OrigenDestino" id="selectDestino">
+                                <option value="Buenos Aires">Buenos Aires</option>
+                                <option value="Mendoza">Mendoza</option>
+                            </select> 
+                        </div>
+                        <!--Fecha de ida y Fecha de regreso-->
+                        <div class="fechas form">
+                            <label>Ida:</label><input class="form-control" type="date" name="fechas" step="1" id="calendarioIda">
+                        </div>
+                        <!--seleecion de personas-adultos-ninos-infantes-->
+                        <div class="seleccion-personas form">
+                            <label>Adultos:</label>
+                            <select class="custom-select" name="personas" id="adultos">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                            </select> 
+                        </div><!--CIERRA seleccion-personas-->
+
+                        <!--DIV DE ERROR-->
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert"></div>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+
+                        <!--boton buscar-->
+                        <button type="button" class="btn btn-success" id="buscar">Buscar</button>
+                        
+                   </div><!--CIERRA IDA Y VUELTA-->
+                </form><!--CIERRA FORM-->
+            </div><!--CIERRA VUELOS-->
+
+            <div class="alert alert-primary" id='alert-disponible' role="alert">
+                NO HAY VUELOS DISPONIBLES
+            </div>
+
+            <div class="busquedaPrincipal ticket">
+                <h2>Elige tu vuelo</h2>
+                <div class="conteiner-busqueda">
+                    <div class="conteiner-ida">
+                        <div class="ida-contenedor">
+                            <div class="primerBloque bloque">
+                                <div class="fecha">
+                                    <i class="fas fa-plane"></i>
+                                    <h4>Ida</h4>
+                                    <p class="fechaIda" id="fechaEntry"></p>
+                                </div>
+                                <div class="origen">
+                                    <h4 id="origenEntry"></h4>
+                                </div>
+                                <div class="destino">
+                                    <h4 id="destinoEntry"></h4>
+                                </div>
+                            </div><!--Cierra Primer Bloque-->
+
+                            <div class="segundoBloque bloque">
+                                <div class="aerolinea">
+                                    <img src="img/menem.png" alt="">
+                                    <p>Charly´s Viajes</p>
+                                </div>
+                                <div class="horaSalida">
+                                    <p><span id="hsalidaEntry"></span></p>
+                                </div>
+                                <div class="horaLlegada">
+                                    <p><span id="hllegadaEntry"></span></p>
+                                </div>
+                            </div><!--Cierra Segundo Bloque-->
+                            <p>Numero de Vuelo</p>
+                            <p>element.PK</p>
+                        </div><!--ida-contenedors-->
+                    </div>
+
+                    <div class="preciosBusqueda">
+                        <div class="asientosDisponibles">
+                            <p class="disponibles" id="asientosEntry">${element.asientos}</p>
+                            <p><span> asientos</span></p>
+                        </div>
+                        <p class="nombrePasajero">Precio por Adulto</p>
+                        <p><span class="preciosPasajero">$ 10.236</span></p>
+                        <hr>
+                        <div class="pasajerosCosto">
+                            <div class="texto-costo">
+                                <ul>
+                                    <li>1 Adulto</li>
+                                    <li>Tasas de impuesto</li>
+                                    <li>Cargos</li>
+                                </ul>
+                            </div>
+                            <div class="costoTotal">
+                                <ul>
+                                    <li>$10.236</li>
+                                    <li>$1.804</li>
+                                    <li>$241</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p><span>Total</span></p>
+                        <p>$12.281</p>
+                        <button class="btn btn-success" id="compraTicket">Comprar</button>
+                    </div>
+                    <!--conteiner-busqueda manana-->            
+                </div>
+                <!--conteiner-busqueda-->
+            </div>
+            <!--busquedaPrincipal-->
+        </div>
+    </div>
+        
+    <div class="cierre">
+        <i class="fab fa-avianex"></i>
+        <i class="fab fa-avianex"></i>
+        <i class="fab fa-avianex"></i>
+    </div>
+
+    <main class="compraUI">
+        <div class="main-busqueda">
+            <h2>Tu mejor Vuelo</h2>
+        </div>
+
+        <div class="ticketCargado">
+            <h4 class="text-center p-3 title-vuelo">Vuelo Seleccionado</h4>
+            <table class="table table-dark boletoTable">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Fecha Salida</th>
+                        <th scope="col">Origen</th>
+                        <th scope="col">Destino</th>
+                        <th scope="col">Horario Salida</th>
+                        <th scope="col">Horario Llegada</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td id="fechaReserva">${fechaIda}</td>
+                        <td id="origenReserva">${origenEntry}</td>
+                        <td id="destinoReserva">${destinoEntry}</td>
+                        <td id="hsalidaReserva">${hsalidaEntry}</td>
+                        <td id="llegadaReserva">${hllegadaEntry}</td>
+                        <td>$12.281</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="compraBoletos">
+            <div class="contenedor-principal">
+                <div class="contenedor-busqueda">
+                    <div class="busqueda_uno">
+                        <form">
+                            <div class="info-compra">
+                                <div class="barra">
+                                    <p class="clasePasajero">
+                                        Adulto
+                                        <span class="cantPasajeros">
+                                            1 pasaje
+                                        </span>
+                                    </p>
+                                </div>
+                                
+                            </div>
+                            <div class="campo">
+                                <label>Nombre/s:</label><input type="text" id="userName" placeholder="Ingrese nombres">
+                                <label>Apellido/s:</label><input type="text" id="userApellido" placeholder="Ingrese apeliidos">
+                                <label>D.N.I:</label><input type="num" id="userDNI" placeholder="DNI sin puntos" maxlength="8">
+
+                                <div class="comprarBoleto">
+                                    <label>N° de tarjeta</label><input type="text" id="CardNumber" placeholder="Ej: 5259541892875221" maxlength="16">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="btn-compra">
+                                <button type="submit" class="btn btn-success" id="compraConfirmada">Confirmar Comprar</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="p-2 mt-5 mb-2 bg-danger text-white text-center errorCompra"></div>
+                </div><!--cierra contenedor-busqueda-->
+            </div><!--CIERRA contenedor-principal-->
+        </div>
+        <div class="muestraIndex">
+
+        </div>
+    </main>
+
+    <div class="img-conteiner">
+        <div class="titular">
+            <h3>El mejor Vuelo del Interior</h3>
+        </div>
+    </div>
+
+    <div class="cierre">
+        <i class="fab fa-avianex"></i>
+        <i class="fab fa-avianex"></i>
+        <i class="fab fa-avianex"></i>
+    </div>
+
+    <!--HOTELERIA-->
+    <main class="hoteleria main-conteiner" id="hoteles">
+        <div class="contenedor-principal">
+            <h2>HOTELERIA</h2>
+            <div class="conteinerHoteles">
+                <div class="hotel-uno hotel">
+                    <h4>Park Hyatt Mendoza Hotel</h4>
+                    <div class="img-hoteles">
+                        <img src="img/hotel1.jpg" alt="Hotel1">
+                    </div>
+                    <ul>
+                        <li><i class="fas fa-motorcycle"></i>Estacionamiento <span>Gratis</span></li>
+                        <li><i class="fas fa-dog"></i>Aceptan<span> Mascotas</span></li>
+                        <li><i class="fas fa-wifi"></i>Wifi<span> Gratis</span></li>
+                    </ul>
+                    <button type="button" class="btn btn-success" id="buscar">Ver mas</button>
+                </div><!--Cierra Hotel 1-->
+                <div class="hotel-dos hotel">
+                    <h4>Hotel Huemul Rio Negro</h4>
+                    <div class="img-hoteles">
+                        <img src="img/hotel2.jpg" alt="Hotel2">
+                    </div>
+                    
+                    <ul>
+                        <li><i class="fas fa-spa"></i>Spa</li>
+                        <li><i class="fas fa-dog"></i>Aceptan<span> Mascotas</span></li>
+                        <li><i class="fas fa-wifi"></i>Wifi<span> Gratis</span></li>
+                    </ul>
+                    <button type="button" class="btn btn-success" id="buscar">Ver mas</button>
+                </div><!--Cierra Hotel 2-->
+                <div class="hotel-3 hotel">
+                    <h4>Fierro Hotel Buenos Aires</h4>
+                    <div class="img-hoteles">
+                        <img src="img/hotel3.jpg" alt="Hotel3">
+                    </div>
+                    <ul>
+                        <li><i class="fas fa-dice-five"></i>VideoJuegos</li>
+                        <li><i class="fas fa-spa"></i>Spa</li>
+                        <li><i class="fas fa-wifi"></i>Wifi<span> Gratis</span></li>
+                    </ul>
+                    <button type="button" class="btn btn-success" id="buscar">Ver mas</button>
+                </div><!--Cierra Hotel 3-->
+            </div><!--CIERRA CONTEINER HOTELES-->
+        </div><!--CIERRA CONTENEDOR PRINCIPAL-->
+    </main><!--CIERRA MAIN HOTELERIA-->
+
+    <div class="cierre">
+        <i class="fab fa-avianex"></i>
+        <i class="fab fa-avianex"></i>
+        <i class="fab fa-avianex"></i>
+    </div>
+
+    <div class="img-conteiner mig2">
+        <div class="titular">
+            <h3>Mas de 10 Años de Experiencia</h3>
+        </div>
+    </div>
+
+    <div class="cierre">
+        <i class="fab fa-avianex"></i>
+        <i class="fab fa-avianex"></i>
+        <i class="fab fa-avianex"></i>
+    </div>
+    <footer>
+        <div class="footer-conteiner">
+            <img src="img/menem.png" alt="">
+            <p>&copyIntegrantes: Yael.Gonzalez, Facus.Mazorca, D.Roldan2.0, G.Britus, J.Fernandez</p>
+        </div>
+    </footer>
+
+
+<script src="js/jquery-1.12.0.min.js"></script>
+<script src="https://kit.fontawesome.com/5db1674db6.js" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
